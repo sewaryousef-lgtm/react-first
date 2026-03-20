@@ -1,7 +1,20 @@
-import React from 'react'
+import Taskiteam from './Taskiteam' // استيراد المكون الصغير
 
-export default function tasklist() {
+function Tasklist({ tasks, onToggle, onDelete }) {
+  console.log("قائمة المهام الحالية:", tasks);
+  
   return (
-    <div>tasklist</div>
+    <ul className="task-list">
+      {tasks.map((task) => (
+        <Taskiteam 
+          key={task.id} 
+          task={task} 
+          onToggle={onToggle} 
+          onDelete={onDelete} 
+        />
+      ))}
+    </ul>
   )
 }
+
+export default Tasklist;

@@ -1,12 +1,12 @@
-import React from 'react'
 
-export default function Header((title,count)) {
+ function Header({title,count}) {
   return (
     <div>
-        <Header>
+        <header>
             <h1>{title}</h1>
             <p>عدد المهام :{count}</p>
-        </Header>
+        </header>
     </div>
   )
 }
+export default Header;
